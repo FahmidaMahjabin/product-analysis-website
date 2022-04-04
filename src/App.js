@@ -11,9 +11,10 @@ import usereviews from './Hooks/useReviews';
 function App() {
   const [reviews, setreviews] = usereviews();
   console.log(reviews)
+  
   return (
     <div>
-      <h1>Lost In Mountain</h1>
+      
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element = {<Home></Home>}></Route>
@@ -21,6 +22,7 @@ function App() {
         <Route path='/dashboard' element = {<DashBoard></DashBoard>}></Route>
         <Route path='/blogs' element = {<Blogs></Blogs>}></Route>
       </Routes>
+      
     </div>
     
   );
