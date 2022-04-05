@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip , Area, AreaChart, Legend} from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Area, AreaChart, Legend, Bar, BarChart, Pie, PieChart, Label } from 'recharts';
 
 const DashBoard = () => {
     const [profile, setProfile] = useState([]);
@@ -10,8 +10,8 @@ const DashBoard = () => {
     }, [])
     return (
         <div>
-            <h1 className='text-7xl text-center font-semibold text-green-900 my-8'>DashBoard</h1>
-            <div className='grid grid-cols-1-sm grid-cols-2 gap-4'>
+            <h1 className='text-5xl text-center font-semibold text-green-900 my-8'>DashBoard</h1>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mx-8'>
 
                 <div>
                     <h1 className='text-4xl text-red-700 font-medium'>Month Vs Sell</h1>
@@ -41,10 +41,56 @@ const DashBoard = () => {
                         <YAxis />
                         <CartesianGrid strokeDasharray="3 3" />
                         <Tooltip />
-                        <Legend verticalAlign="top" height={36}/>
+                        <Legend verticalAlign="top" height={36} />
                         <Area type="monotone" dataKey="investment" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
                         <Area type="monotone" dataKey="revenue" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
                     </AreaChart>
+                </div>
+                <div>
+                    <h1 className='text-4xl text-red-700 font-medium'>Investment Vs Revenue</h1>
+                    <div>
+                        <BarChart
+                            width={500}
+                            height={300}
+                            data={profile}
+                            margin={{
+                                top: 5,
+                                right: 30,
+                                left: 20,
+                                bottom: 5,
+                            }}>
+
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="month" />
+                            <YAxis />
+                            <Tooltip />
+                            <Legend />
+                            <Bar dataKey="revenue" fill="#8884d8" />
+                            <Bar dataKey="investment" fill="#82ca9d" />
+                        </BarChart>
+
+
+                    </div>
+                </div>                
+                <div>
+                <h1 className='text-4xl text-red-700 font-medium'>Investment on a year</h1>
+                <div>
+                    <PieChart width={400} height={400}>
+                        <Pie
+                            dataKey="investment"
+                            startAngle={360}
+                            endAngle={0}
+                            data={profile}
+                            cx="50%"
+                            cy="50%"
+                            outerRadius={80}
+                            fill="#8884d8"
+                            label
+                            
+                        />
+                        <Tooltip />
+                    </PieChart>
+                </div>
                 </div>
             </div>
 

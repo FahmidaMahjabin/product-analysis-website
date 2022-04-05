@@ -9,9 +9,11 @@ const Home = () => {
     return (
         <div>
             <h1 className='text-5xl font-bold text-center text-green-900 p-4'>Lost in Mountain</h1>
-            <div className="grid grid-cols-2 gap-4 m-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 m-8">
                 <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum consequatur delectus, totam cumque magnam accusantium dolor voluptates tempora velit, accusamus cum, fugiat inventore odit ex! Amet, ea ut voluptatum reiciendis iusto consequuntur doloribus illum provident perspiciatis similique ab laboriosam voluptatibus deleniti repudiandae dolorum culpa quam eaque earum maxime cumque quibusdam aspernatur doloremque delectus. Reiciendis esse excepturi maxime adipisci quaerat aliquid, dolor aspernatur consequatur odit sit nam ab aut minus ullam perferendis nulla numquam sint qui saepe tempora iure suscipit amet fugiat. Recusandae ipsum qui excepturi illo mollitia explicabo quia! Magni, ipsa ab temporibus laudantium dolorum mollitia quod dolorem reiciendis quisquam.</p>
+                    <p className='justify-center'>
+                    Traveling is more than just seeing the most popular places of interest in a country. It also involves delving into new cultures and experiences, as well as learning what there is to know from the local populace, among other things. No matter who you’re looking to travel with, you can depend on our 2,500 trusted operators to make sure everything’s taken care of.
+                    </p>
                 </div>
                 <div className='mx-auto'>
                     <img src="https://img.freepik.com/free-psd/travel-tour-instagram-post-social-media-post-template_501970-132.jpg?t=st=1649066311~exp=1649066911~hmac=727e65b5fabac90ce39800c803977d3def437108d5fd0ed83b2fdb2908a225f6&w=740" className='w-80' alt="travel photo"></img>
