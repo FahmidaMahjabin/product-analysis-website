@@ -7,6 +7,7 @@ import Home from './Components/Home/Home';
 import Navbar from './Components/Navbar/Navbar';
 import Reviews from './Components/Reviews/Reviews';
 import usereviews from './Hooks/useReviews';
+import NotFound from './NotFound/NotFound';
 
 function App() {
   const [reviews, setreviews] = usereviews();
@@ -21,6 +22,7 @@ function App() {
         <Route path='/reviews' element = {<Reviews></Reviews>}></Route>
         <Route path='/dashboard' element = {<DashBoard></DashBoard>}></Route>
         <Route path='/blogs' element = {<Blogs></Blogs>}></Route>
+        <Route path = '*' element = {<NotFound></NotFound>}></Route>
       </Routes>
       
     </div>
